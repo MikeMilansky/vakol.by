@@ -1,0 +1,38 @@
+<div class="st-contacts">
+	<div class="mb-2">
+		<i class="fa fa-phone fa-4x align-middle" aria-hidden="true"></i>
+		<h6 class="info-title">Контактная информация</h6>
+	</div>
+	<div class="section">
+		<div class="row">
+			<div class="col">
+				<h6 class="section-title">Телефон:</h6>
+			</div>
+		</div>
+		<div class="row" *ngFor="let phone of data.phones">
+			<div class="col-4">{{phone.type}}:</div>
+			<div class="col-8">{{phone.number}}</div>
+		</div>
+	</div>
+	<div class="section">
+		<div class="row">
+			<div class="col">
+				<h6 class="section-title">Электронная почта:</h6>
+			</div>
+		</div>
+		<div class="row" *ngFor="let mail of data.emails">
+			<div class="col-12"><a [href]="'mailto:' + mail.email">{{mail.email}}</a> ({{mail.description}})</div>
+		</div>
+	</div>
+	<div class="section">
+		<div class="row">
+			<div class="col">
+				<h6 class="section-title">Вебсайт:</h6>
+			</div>
+		</div>
+		<div class="row" *ngFor="let site of data.sites">
+			<div class="col-12"><a [href]="site.site">{{site.site}}</a> ({{site.description}})</div>
+		</div>
+	</div>
+	<div class="section" *ngIf="data.freeText"><span [innerHtml]="data.freeText"></span></div>
+</div>

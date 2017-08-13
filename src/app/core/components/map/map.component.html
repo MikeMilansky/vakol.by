@@ -1,0 +1,7 @@
+<div class="map">
+	<div class="map-container" *ngIf="data">
+		<sebm-google-map [latitude]="data.latitude" [longitude]="data.longitude">
+			<sebm-google-map-marker [latitude]="data.latitude" [longitude]="data.longitude"></sebm-google-map-marker>
+		</sebm-google-map>
+	</div>
+</div>

@@ -1,0 +1,9 @@
+@import "../../../styles/variables/colors.scss";
+
+.opportunities {
+	font-size: 0.7rem;
+
+	.card-header {
+		background-color: $c-light;
+	}
+}

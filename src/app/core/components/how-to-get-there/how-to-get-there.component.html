@@ -1,0 +1,14 @@
+<div class="st-working-hours">
+	<div class="mb-2">
+		<i class="fa fa-bus fa-4x align-middle" aria-hidden="true"></i>
+		<h6 class="info-title">Как добраться</h6>
+	</div>
+	<div class="section" *ngIf="!!data.address">
+		<div class="row"><div class="col">{{data.address.area}}</div></div>
+		<div class="row"><div class="col">{{data.address.subarea}}</div></div>
+		<div class="row"><div class="col">{{data.address.locality}}</div></div>
+		<div class="row"><div class="col">{{data.address.street}}</div></div>
+		<div class="row"><div class="col">{{data.address.building}}</div></div>
+	</div>
+	<div [innerHtml]="data.text"></div>
+</div>

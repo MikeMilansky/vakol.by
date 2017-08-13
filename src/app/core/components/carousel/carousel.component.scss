@@ -1,0 +1,42 @@
+@import "../../../styles/variables/colors.scss";
+
+.carousel {
+	.carousel-caption {
+		left: 0;
+		right: 0;
+		bottom: 0;
+		text-align: left;
+		padding: 10px;
+		background-color: $white;
+		opacity: 0;
+		color: $c-primary;
+		transition: opacity 0.3s;
+
+		h3 {
+			font-size: 0.9rem;
+			margin: 0;
+			font-weight: bold;
+		}
+
+		p {
+			font-size: 0.7rem;
+			margin: 0;
+		}
+	}
+
+	.carousel-indicators {
+		li {
+			background-color: $c-dark;
+
+			&.active {
+				background-color: $c-light;
+			}
+		}
+	}
+
+	&:hover {
+		.carousel-caption {
+			opacity: 0.8;
+		}
+	}
+}

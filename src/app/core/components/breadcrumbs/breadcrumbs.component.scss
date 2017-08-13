@@ -1,0 +1,21 @@
+@import "../../../styles/variables/colors.scss";
+
+.st-breadcrumbs {
+	list-style-type: none;
+	padding: 10px 0;
+	margin-bottom: 0;
+
+	.st-breadcrumbs-item {
+		display: inline-block;
+		padding-right: 5px;
+
+		&:last-child .fa {
+			display: none;
+		}
+
+		.fa {
+			color: $c-primary;
+			padding-left: 5px;
+		}
+	}
+}

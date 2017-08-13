@@ -1,0 +1,45 @@
+<div class="place-page">
+	<div class="row">
+		<breadcrumbs></breadcrumbs>
+		<div class="col-xs-12 col-lg-10">
+			<div class="row pd-b-10">
+				<div class="col-xs-12">
+					<carousel data="albumData"></carousel>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-4">
+					<opportunities [data]="servicesData"></opportunities>
+					<map [data]="descriptionData.point"></map>
+				</div>
+				<div class="col-8">
+					<div class="mb-3">
+						<h5>{{descriptionData.name}}</h5>
+						<div [innerHtml]="descriptionData.description">
+						</div>
+					</div>
+					<div class="place-info">
+						<div class="info-block">
+							<what-to-take></what-to-take>
+						</div>
+						<div class="info-block">
+							<st-contacts [data]="contactInfo"></st-contacts>
+						</div>
+						<div class="info-block">
+							<st-working-hours [data]="workingHoursInfo"></st-working-hours>
+						</div>
+						<div class="info-block">
+							<st-how-to-get-there [data]="howToGetThereInfo"></st-how-to-get-there>
+						</div>
+						<div class="info-block">
+							<st-other [data]="otherInfo"></st-other>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-12 col-lg-2">
+			<stats></stats>
+		</div>
+	</div>
+</div>
